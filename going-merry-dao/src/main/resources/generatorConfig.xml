@@ -82,13 +82,13 @@
 
 
         <!-- 表配置段 -->
-        <!--<table tableName="custom" domainObjectName="CustomEntity" enableInsert="true"-->
-               <!--enableSelectByPrimaryKey="true" enableSelectByExample="true"-->
-               <!--enableUpdateByPrimaryKey="true" enableDeleteByPrimaryKey="true"-->
-               <!--enableDeleteByExample="true" enableCountByExample="true"-->
-               <!--enableUpdateByExample="true" selectByPrimaryKeyQueryId="true"-->
-               <!--selectByExampleQueryId="true">-->
-        <!--</table>-->
+        <table tableName="custom" domainObjectName="CustomEntity" enableInsert="true"
+               enableSelectByPrimaryKey="true" enableSelectByExample="true"
+               enableUpdateByPrimaryKey="true" enableDeleteByPrimaryKey="true"
+               enableDeleteByExample="true" enableCountByExample="true"
+               enableUpdateByExample="true" selectByPrimaryKeyQueryId="true"
+               selectByExampleQueryId="true">
+        </table>
 
     </context>
     <!--

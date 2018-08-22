@@ -1,4 +1,4 @@
-package com.virginia.goingmerry.web.controller;
+package com.virginia.going.merry.web.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
