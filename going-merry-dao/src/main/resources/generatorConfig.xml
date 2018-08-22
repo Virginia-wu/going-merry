@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="userTables" defaultModelType="flat"
+             targetRuntime="MyBatis3">
+
+        <property name="autoDelimitKeywords" value="false"/>
+        <property name="javaFileEncoding" value="UTF-8"/>
+
+        <property name="mergeable" value="true"></property>
+
+        <!-- MySQL分页插件 -->
+        <plugin type="com.itfsw.mybatis.generator.plugins.LimitPlugin"/>
+        <!-- 查询单条数据插件 -->
+        <plugin type="com.itfsw.mybatis.generator.plugins.SelectOneByExamplePlugin"/>
+        <!-- 数据Model链式构建插件 -->
+        <plugin type="com.itfsw.mybatis.generator.plugins.ModelBuilderPlugin"/>
+        <!-- Example Criteria 增强插件 -->
+        <plugin type="com.itfsw.mybatis.generator.plugins.ExampleEnhancedPlugin"/>
+        <!-- 批量插入插件 -->
+        <plugin type="com.itfsw.mybatis.generator.plugins.BatchInsertPlugin"/>
+        <!-- Example 目标包修改插件 -->
+        <plugin type="com.itfsw.mybatis.generator.plugins.ExampleTargetPlugin">
+            <!-- 修改Example类生成到目标包下 -->
+            <property name="targetPackage" value="com.glodon.bimhouse.stat.dao.model"/>
+        </plugin>
+        <!-- 数据Model属性对应Column获取插件 -->
+        <plugin type="com.itfsw.mybatis.generator.plugins.ModelColumnPlugin"/>
+
+        <!-- Selective选择插入更新增强插件！请配在所有插件末尾以便最后执行 -->
+        <plugin type="com.itfsw.mybatis.generator.plugins.SelectiveEnhancedPlugin"/>
+        <!-- 查询结果选择性返回插件 -->
+        <plugin type="com.itfsw.mybatis.generator.plugins.SelectSelectivePlugin" />
+
+        <!-- 注释生成配置 -->
+        <commentGenerator>
+            <property name="suppressAllComments" value="false"/>
+        </commentGenerator>
+
+        <!-- 数据库链接配置 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://47.106.222.76:3306/going_merry" userId="admin"
+                        password="admin">
+        </jdbcConnection>
+
+        <!-- 数据类型解析定义 -->
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <!-- 代码生成配置段 -->
+        <!-- Entity -->
+        <javaModelGenerator targetPackage="com.glodon.bimhouse.stat.dao.model"
+                            targetProject="./src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+
+        <!-- VO类 ，不需要生成注释
+        <javaModelGenerator targetPackage="com.glodon.bimhouse.stat.client.vo"
+            targetProject="../stat-client/src/main/java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>-->
+
+        <!--  XML文件-->
+        <sqlMapGenerator targetPackage="com.glodon.bimhouse.stat.dao.mapper"
+                         targetProject="./src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+
+        <!-- 接口文件-->
+        <javaClientGenerator targetPackage="com.glodon.bimhouse.stat.dao.mapper"
+                             targetProject="./src/main/java" type="XMLMAPPER">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+
+        <!-- 表配置段 -->
+        <!--<table tableName="custom" domainObjectName="CustomEntity" enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true" enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true" enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true" enableCountByExample="true"-->
+               <!--enableUpdateByExample="true" selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+        <!--</table>-->
+
+    </context>
+    <!--
+    maven cmd:
+    mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
+     -->
+</generatorConfiguration>
