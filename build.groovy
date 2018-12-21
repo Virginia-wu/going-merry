@@ -1,7 +1,7 @@
 node {
     def dockerImage
-    def imageName = 'going-merry'
-    def serviceName = 'going-merry'
+    def imageName = 'goingmerry'
+    def serviceName = 'goingmerry'
     def registryUrl = 'registry.virginia.com:5000'
     def httpRegistryUrl = 'http://'+registryUrl
     def maven = docker.image('maven:3-alpine')
