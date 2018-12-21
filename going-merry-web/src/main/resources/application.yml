@@ -1,13 +1,13 @@
 server:
   port: 8080
-#  tomcat:
-#    max-threads: 500
-#    uri-encoding: UTF-8
-#    accesslog:
-#      enabled: true
-#      directory: /data/logs
-#      rotate: true
-#      pattern: '%h %l %u %t "%r" %s %b %D'
+  tomcat:
+    max-threads: 500
+    uri-encoding: UTF-8
+    accesslog:
+      enabled: true
+      directory: /data/logs
+      rotate: true
+      pattern: '%h %l %u %t "%r" %s %b %D'
 
 spring:
   application:
