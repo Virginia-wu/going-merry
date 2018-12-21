@@ -8,8 +8,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>going-merry-web</name>
 
-	<packaging>jar</packaging>
-
 	<parent>
 		<artifactId>going-merry</artifactId>
 		<groupId>com.virginia</groupId>
@@ -47,5 +45,6 @@
 		<finalName>goingmerry</finalName>
 	</build>
 
+	<packaging>jar</packaging>
 
 </project>
