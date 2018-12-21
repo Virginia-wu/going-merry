@@ -18,4 +18,3 @@ ENTRYPOINT exec java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -Dspring
 COPY ./target/${APP_NAME}.jar /data/${APP_NAME}.jar
 
 
-
