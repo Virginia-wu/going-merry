@@ -15,7 +15,7 @@ ENV PROFILE=docker
 ENV APP_NAME=goingmerry
 ENV JAVA_OPTS=""
 ENTRYPOINT exec java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -Dspring.profiles.active=${PROFILE} -jar /data/${APP_NAME}.jar
-CMD [ "ls", "./target" ]
+ENTRYPOINT ls ./target -l
 COPY ./target/${APP_NAME}.jar /data/${APP_NAME}.jar
 
 
